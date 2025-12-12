@@ -40,7 +40,7 @@ public class SpawnManager : MonoBehaviour
         
         Vector3 spawnPosition = new Vector3(10f, randomY, 0f);
 
-        // INSTANTIATE: Membuat objek PipePrefab di posisi yang telah ditentukan
+        
         Instantiate(pipePrefab, spawnPosition, Quaternion.identity);
     }
 }

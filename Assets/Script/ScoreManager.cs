@@ -25,17 +25,24 @@ public class ScoreManager : MonoBehaviour
     
     public void AddScore(int value)
     {
+        //Debug.Log($"Score: {_currentScore}");
         _currentScore += value;
-        Debug.Log($"Score: {_currentScore}");
+        UpdateUI();
+    }
+    private void UpdateUI() 
+    {
+        if (UImanager.Instance != null)
+        {
+            UImanager.Instance.UpdateScoreDisplay(_currentScore);
+        }
     }
 
-    
     public int GetCurrentScore()
     {
         return _currentScore;
     }
 
-   
+    
     public void ResetScore()
     {
         _currentScore = 0;
