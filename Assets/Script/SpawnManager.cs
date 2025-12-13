@@ -16,11 +16,20 @@ public class SpawnManager : MonoBehaviour
     
     IEnumerator SpawnPipesRoutine()
     {
-       
+        while (!GameManager.Instance.IsGameStarted())
+        {
+            yield return null;
+        }
+
         while (true)
         {
-            SpawnPipe();
-            
+      
+            if (GameManager.Instance.IsGameStarted() &&
+            !GameManager.Instance.IsGameOver())
+            {
+                SpawnPipe();
+            }
+
             yield return new WaitForSeconds(spawnRate);
         }
     }

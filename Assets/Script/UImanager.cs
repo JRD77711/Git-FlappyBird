@@ -30,51 +30,50 @@ public class UImanager : MonoBehaviour
         }
     }
 
-    //private void Start()
-    //{
-        //Bagian ini nanti akan dipanggil saat Game Manager sudah dibuat
-        //ShowStartPanel();
-        //HideGameOverPanel();
-    //}
+    private void Start()
+    {
+        ShowStartPanel();
+        HideGameOverPanel();
+    }
 
-    //public void ShowStartPanel()
-    //{
-    //    if (startPanel != null)
-    //    {
-    //        startPanel.SetActive(true);
-    //    }
-    //}
+    public void ShowStartPanel()
+    {
+        if (startPanel != null)
+        {
+            startPanel.SetActive(true);
+        }
+    }
 
-    //public void HideStartPanel()
-    //{
-    //    if (startPanel != null)
-    //    {
-    //        startPanel.SetActive(false);
-    //    }
-    //}
+    public void HideStartPanel()
+    {
+        if (startPanel != null)
+        {
+            startPanel.SetActive(false);
+        }
+    }
 
-    //public void ShowGameOverPanel(int finalScore)
-    //{
-    //    if (gameOverPanel != null)
-    //    {
-    //        gameOverPanel.SetActive(true);
-    //    }
+    public void ShowGameOverPanel(int finalScore)
+    {
+        if (gameOverPanel != null)
+        {
+            gameOverPanel.SetActive(true);
+        }
 
-    //    if (scoreText != null)
-    //    {
-    //        scoreText.text = finalScore.ToString();
-    //    }
-    //}
+        if (scoreText != null)
+        {
+            scoreText.text = finalScore.ToString();
+        }
+    }
 
-//    public void HideGameOverPanel()
-//    {
-//        if (gameOverPanel != null)
-//        {
-//            gameOverPanel.SetActive(false);
-//        }
-//    }
+    public void HideGameOverPanel()
+    {
+        if (gameOverPanel != null)
+        {
+            gameOverPanel.SetActive(false);
+        }
+    }
 
-    /// Update tampilan skor real-time
+    // Update tampilan skor real-time
     public void UpdateScoreDisplay(int currentScore)
     {
        if (scoreTextRealtime != null)
